@@ -3,6 +3,6 @@ COPY ./website /app/website
 COPY ./requirements.txt /app
 COPY ./main.py /app
 WORKDIR /app
-RUN apk add --no-cache git
+RUN apk add --no-cache git gcc
 RUN pip install -r requirements.txt
 CMD [ "python", "main.py" ]
