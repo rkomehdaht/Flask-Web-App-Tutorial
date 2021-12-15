@@ -1,8 +1,7 @@
-FROM python:3.11.0a3-alpine3.15
+FROM python:3.11.0a3-slim
 COPY ./website /app/website
 COPY ./requirements.txt /app
 COPY ./main.py /app
 WORKDIR /app
-RUN apk add --no-cache git gcc
 RUN pip install -r requirements.txt
 CMD [ "python", "main.py" ]
