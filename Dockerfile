@@ -3,5 +3,5 @@ COPY ./website /app/website
 COPY ./requirements.txt /app
 COPY ./main.py /app
 WORKDIR /app
-RUN pip install -r requirements.txt
+RUN apt-get update && apt-get install gcc && pip install -r requirements.txt
 CMD [ "python", "main.py" ]
