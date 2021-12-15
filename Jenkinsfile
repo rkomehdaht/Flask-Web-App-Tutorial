@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Pulling from GitHub"){
             steps {
-                git clone https://github.com/rkomehdaht/Flask-Web-App-Tutorial
+                git clone https://github.com/rkomehdaht/Flask-Web-App-Tutorial.git
             }  
         }
         stage("Deploying"){
